@@ -13,7 +13,8 @@ $theme-color-map: (
   'Mint Green': #16982B #f5f5f5,
   'Cobalt Blue': #0047AB #f0f2f5,
   'Hot Pink': #FF69B4 #f8f5f5,
-  'Dark Violet': #9932CC #f5f4fa
+  'Dark Violet': #9932CC #f5f4fa,
+  // 'Dark': #66666d #66666d 
 );
 
 // Check theme color config.
@@ -32,6 +33,7 @@ $deputy-color: nth($theme-color-list, 2) !default;
 
 // ========== Color ========== //
 $black: #0a0a0a !default;
+$code-bg: #333;
 $white: #fefefe !default;
 $light-gray: #e6e6e6 !default;
 $gray: #cacaca !default;
@@ -55,10 +57,10 @@ $global-container-padding: 0 20px !default;
 $global-lineheight: 1.5 !default;
 
 // Font family of the site.
-$global-font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
+$global-font-family: Roboto, 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
 
 // Serif font family of the site.
-$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
+$global-serif-font-family: Roboto, Athelas, STHeiti, Microsoft Yahei, serif !default;
 
 // Background color of the site.
 $global-background: $white !default;
@@ -79,23 +81,36 @@ $global-headings: (
 $header-padding: 20px 20px !default;
 
 // Font family: Chancery
+// @font-face {
+  // font-family: 'Chancery';
+  // src: url('../fonts/chancery/apple-chancery-webfont.eot');
+  // src: local('Apple Chancery'), url('../fonts/chancery/apple-chancery-webfont.eot?#iefix') format('embedded-opentype'),
+  // url('../fonts/chancery/apple-chancery-webfont.woff2') format('woff2'),
+  // url('../fonts/chancery/apple-chancery-webfont.woff') format('woff'),
+  // url('../fonts/chancery/apple-chancery-webfont.ttf') format('truetype'),
+  // url('../fonts/chancery/apple-chancery-webfont.svg#apple-chancery') format('svg');
+  // font-weight: lighter;
+  // font-style: normal;
+  
+// }
 @font-face {
-  font-family: 'Chancery';
-  src: url('../fonts/chancery/apple-chancery-webfont.eot');
-  src: local('Apple Chancery'), url('../fonts/chancery/apple-chancery-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/chancery/apple-chancery-webfont.woff2') format('woff2'),
-  url('../fonts/chancery/apple-chancery-webfont.woff') format('woff'),
-  url('../fonts/chancery/apple-chancery-webfont.ttf') format('truetype'),
-  url('../fonts/chancery/apple-chancery-webfont.svg#apple-chancery') format('svg');
-  font-weight: lighter;
+  font-family: 'Roboto';
   font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
 // Font size of the logo.
-$logo-font-size: 48px !default;
+$logo-font-size: 42px !default;
 
 // Font family of the logo.
-$logo-font-family: 'Chancery', cursive, LiSu, sans-serif !default;
+$logo-font-family: 'Roboto', 'Chancery', cursive, LiSu, sans-serif !default;
 
 // Margin of menu item.
 $menu-item-margin-left: 10px !default;
@@ -199,7 +214,7 @@ $code-font-family: Consolas, Monaco, Menlo, "DejaVu Sans Mono",
 // Color of code highlight, solarized.
 $code-highlight-color: (
   comment: #93a1a1,
-  keyword: #859900,
+  keyword: #b6d106,
   number: #2aa198,
   title: #268bd2,
   attribute: #b58900,
@@ -257,7 +272,7 @@ $code-type-list: (
 ) !default;
 
 // Color of the code background.
-$code-background: $deputy-color !default;
+$code-background: $code-bg !default;
 
 
 // ========== Pagination ========== //
